@@ -1,2 +1,2 @@
 # MultiButton
-Library to simplify the use of buttons in Microcontrolers
+Librería para utilizar botones de manera sencilla.
