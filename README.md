@@ -93,6 +93,42 @@ void loop() {
 
 ---
 
+## 🎮 Ejemplo Avanzado: Interfaz con 2 Botones
+
+Gracias a la orientación a objetos, puedes controlar múltiples botones sin duplicar variables de tiempo ni funciones. Cada objeto gestiona su propio cronómetro interno y su máquina de estados de manera independiente:
+
+```cpp
+#include <MultiButton.h>
+
+MultiButton btnNext(4);    // Pin 4 a GND
+MultiButton btnSelect(5);  // Pin 5 a GND
+
+void setup() {
+  Serial.begin(115200);
+  btnNext.begin();
+  btnSelect.begin();
+}
+
+void loop() {
+  ButtonEvent evNext   = btnNext.update();
+  ButtonEvent evSelect = btnSelect.update();
+
+  // Control del primer botón (Navegación)
+  if (evNext == EVENT_SINGLE_CLICK) {
+    Serial.println("Opcion siguiente");
+  }
+
+  // Control del segundo botón (Selección / Salida)
+  if (evSelect == EVENT_SINGLE_CLICK) {
+    Serial.println("Confirmar opcion");
+  } else if (evSelect == EVENT_LONG_PRESS) {
+    Serial.println("Atras / Cancelar");
+  }
+}
+```
+
+---
+
 ## 📊 Lista de Eventos Disponibles
 
 | Evento | Descripción | Caso de uso típico |
