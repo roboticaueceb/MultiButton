@@ -28,7 +28,7 @@ La librería utiliza la resistencia interna de **Pull-Up** del microcontrolador.
 * **Terminal 1 del botón:** Conectado al pin configurado (ej. GPIO 5).
 * **Terminal 2 del botón:** Conectado directamente a **GND**.
 
-* **En reposo (suelto):** El pin lee `HIGH` (3.3V).  
+* **En reposo (suelto):** El pin lee `HIGH` (5V o 3.3V).  
 * **Presionado:** El pin lee `LOW` (0V).
 
 ---
