@@ -25,19 +25,6 @@ La librería utiliza la resistencia interna de **Pull-Up** del microcontrolador.
 
 ![Diagrama de conexión](docs/assets/arduino%20y%20boton.png)
 
-```text
-       ┌──────────────┐
-       │Arduino/ESP32 │
-       │              │
-       │       GPIO 5 ├─────────┐
-       │              │         │
-       │          GND ├───┐     │
-       └──────────────┘   │   ┌─┴─┐
-                          │   │   │  Pulsador (Push Button)
-                          └───┤   │
-                              └───┘
-```
-
 * **Terminal 1 del botón:** Conectado al pin configurado (ej. GPIO 5).
 * **Terminal 2 del botón:** Conectado directamente a **GND**.
 
