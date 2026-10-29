@@ -23,6 +23,8 @@ Diseñada para el desarrollo de menús, interfaces y robots de competencia en el
 
 La librería utiliza la resistencia interna de **Pull-Up** del microcontrolador. No requieres resistencias externas adicionales en la protoboard.
 
+![Diagrama de conexión](docs/assets/arduino%20y%20boton.png)
+
 ```text
        ┌──────────────┐
        │Arduino/ESP32 │
